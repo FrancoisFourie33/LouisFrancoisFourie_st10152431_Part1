@@ -1,0 +1,29 @@
+﻿@model CLDV6211_POE_Part1.Models.Table_1
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">
+        Welcome
+    </h1>
+    <p>
+        Learn About
+        <a href="http://learn.microsoft.com/aspnet/core">
+            building Web Apps with ASP.NET Core
+        </a>
+    </p>
+</div>
+
+<body>
+    <form action="About" method="post">
+        <p>
+            Please enter your first and last name:
+        </p>
+        <input type="text" name="Name" placeholder=@Model.Name required />
+        <input type="text" name="Surname" placeholder=@Model.Surname required />
+        <input type="text" name="Email" placeholder=@Model.Email required />
+        <button type="submit">Submit</button>
+    </form>
+</body>
