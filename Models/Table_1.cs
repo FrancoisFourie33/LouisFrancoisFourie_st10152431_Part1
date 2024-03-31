@@ -27,9 +27,6 @@ namespace CLDV6211_POE_Part1.Models
             con.Close();
             return rowsAffected;
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+        
     }
 }
