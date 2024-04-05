@@ -1,91 +1,84 @@
-﻿@{
+﻿@model CLDV6211_POE_Part1.Models.Table_1
+@{
     ViewData["Title"] = "Contact";
 }
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <h1>Contact KhumaloCraft Emporium</h1>
-            <p>Have a question or feedback? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
-            <form>
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" class="form-control" id="subject" placeholder="Enter the subject">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-<style>
-
-    .jumbotron {
-        background-color: #fff;
-        padding: 80px 20px;
-        margin-bottom: 0;
-    }
-
-        .jumbotron h1 {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 30px;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        .contact-section {
+            background-image: url('images/lk.png'); /* Specify the path to your local background image */
+            background-size: auto 50%; /* Set background size to 50% of its original size */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            padding: 80px 20px; /* Add padding to the section */
         }
 
-        .jumbotron p {
-            font-size: 1.2rem;
-            color: #666;
+            .contact-section h1 {
+                font-size: 3rem;
+                font-weight: bold;
+                color: #333;
+                margin-bottom: 30px;
+            }
+
+            .contact-section p {
+                font-size: 1.2rem;
+                color: #666;
+            }
+
+        .form-group {
+            margin-bottom: 20px; /* Add margin between form fields */
         }
-
-    .feature-icon {
-        font-size: 3rem;
-        color: #ffcc00; 
-    }
-
-    .feature-title {
-        color: #333;
-        font-weight: bold;
-        margin-top: 20px;
-    }
-
-    .photo-container {
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-between;
-    }
-</style>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <i class="bi bi-shop feature-icon"></i>
-            <h3 class="feature-title">Shop Unique Crafts</h3>
-            <p>Explore a diverse collection of artisanal crafts, from pottery to textiles.</p>
+        /* You can add more styles as needed */
+    </style>
+</head>
+<body>
+    <div class="container contact-section">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1>Contact KhumaloCraft Emporium</h1>
+                <p>Have a question or feedback? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+                <form action="/User/Contact" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="Name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Surname</label>
+                        <input type="text" class="form-control" name="Surname" placeholder="Enter your surname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" name="Email" placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
         </div>
-        <div class="col-md-4">
-            <i class="bi bi-truck feature-icon"></i>
-            <h3 class="feature-title">Global Shipping</h3>
-            <p>We ship worldwide so you can enjoy handmade treasures no matter where you are.</p>
-        </div>
-        <div class="col-md-4">
-            <i class="bi bi-heart feature-icon"></i>
-            <h3 class="feature-title">Support Artisans</h3>
-            <p>Your purchases support talented artisans and their communities.</p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <i class="bi bi-shop feature-icon"></i>
+                    <h3 class="feature-title">Shop Unique Crafts</h3>
+                    <p>Explore a diverse collection of artisanal crafts, from pottery to textiles.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-truck feature-icon"></i>
+                    <h3 class="feature-title">Global Shipping</h3>
+                    <p>We ship worldwide so you can enjoy handmade treasures no matter where you are.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-heart feature-icon"></i>
+                    <h3 class="feature-title">Support Artisans</h3>
+                    <p>Your purchases support talented artisans and their communities.</p>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</body>
+</html>
+
+
 
 

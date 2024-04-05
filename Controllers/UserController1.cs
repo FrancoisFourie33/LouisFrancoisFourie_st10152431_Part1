@@ -4,29 +4,28 @@ using System.Data.SqlClient;
 
 namespace CLDV6211_POE_Part1.Controllers
 {
-    public class UserController1 : Controller
+    public class UserController : Controller
     {
 
-        private static string con_string = "Server=tcp:cldv-sql-server-st10152431.database.windows.net,1433;Initial Catalog=CLDV_DB1;Persist Security Info=False;User ID=LouisFrancoisFourie;Password=Monkeys2002;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
-        private static SqlConnection con = new SqlConnection(con_string);
+        public Table_1 usrtbl = new Table_1();
 
-        public IActionResult Index()
+
+
+        [HttpPost]
+        public ActionResult Contact(Table_1 Users)
         {
-            return View();
+            var result = usrtbl.insert_User(Users);
+            return RedirectToAction("Index", "Home");
         }
 
-
-
-
-        public Table_1 Table_1 = new Table_1();
-
-
-        public ActionResult About(Table_1 Users)
+        [HttpGet]
+        public ActionResult Contact()
         {
-            var result = Table_1.insert_user(Users);
-            return RedirectToAction("Home", "About");
+            return View(usrtbl);
         }
+
 
     }
 
 }
+

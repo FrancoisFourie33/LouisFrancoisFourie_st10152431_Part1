@@ -1,22 +1,39 @@
-﻿@{
+﻿@model CLDV6211_POE_Part1.Models.Table_1
+@{
     ViewData["Title"] = "Home";
 }
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            background-image: url('images/lk.png');
+            background-size: auto 75%;
+            background-repeat: no-repeat;
+            background-position: center;
+            font-family: Arial, sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to KhumaloCraft Emporium</h1>
 
-<h1>Welcome to KhumaloCraft Emporium</h1>
+    <p>KhumaloCraft Emporium is your one-stop destination for exquisite handcrafted products from artisans around the world. Explore our collection of unique items crafted with passion and tradition.</p>
 
-<p>KhumaloCraft Emporium is your one-stop destination for exquisite handcrafted products from artisans around the world. Explore our collection of unique items crafted with passion and tradition.</p>
-
-<div class="row">
-    <div class="col-md-6">
-        <h2>About Us</h2>
-        <p>Learn about our mission, vision, and the artisans behind the craft. Discover the stories behind each creation and the cultural significance they hold.</p>
-        <a class="btn btn-primary" asp-controller="Home" asp-action="About">Learn More</a>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>About Us</h2>
+            <p>Learn about our mission, vision, and the artisans behind the craft. Discover the stories behind each creation and the cultural significance they hold.</p>
+            <a class="btn btn-primary" asp-controller="Home" asp-action="About">Learn More</a>
+        </div>
+        <div class="col-md-6">
+            <h2>Shop Now</h2>
+            <p>Browse our curated selection of handcrafted products. From jewelry and home decor to clothing and accessories, find the perfect piece to complement your style.</p>
+            <a class="btn btn-primary" asp-controller="Home" asp-action="MyWork">Explore</a>
+        </div>
     </div>
-    <div class="col-md-6">
-        <h2>Shop Now</h2>
-        <p>Browse our curated selection of handcrafted products. From jewelry and home decor to clothing and accessories, find the perfect piece to complement your style.</p>
-        <a class="btn btn-primary" asp-controller="Home" asp-action="MyWork">Explore</a>
-    </div>
-</div>
+</body>
+</html>
 
 
